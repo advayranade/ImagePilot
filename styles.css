@@ -1,0 +1,46 @@
+.img_card {
+    background-color: rgb(164, 162, 162);
+    width: 500px;
+    font-family: sans-serif;
+    padding: 5px;
+    margin: 20px;
+    border-radius: 10px;
+
+}
+ul#img_grid {  
+    list-style: none;
+}
+li {
+    float: left;
+}
+
+input {
+    width: 590px;
+    font-size: 15px;
+    border-radius: 10px;
+    padding-left: 15px;
+    height: 30px;
+    /* padding-top: 30px; */
+}
+
+button {
+    width: 250px;
+    height: 40px;
+    /* display: inline; */
+    border-radius: 10px;
+    background-color: #137792;
+    color: white;
+    font-size: 20px; 
+}
+
+body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: sans-serif;
+    margin-left: 10px;
+}
