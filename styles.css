@@ -1,3 +1,7 @@
+body {
+    font-family: sans-serif;
+}
+
 .img_card {
     background-color: rgb(164, 162, 162);
     width: 500px;
@@ -23,12 +27,21 @@ input {
     /* padding-top: 30px; */
 }
 
-button {
+button#submit {
     width: 250px;
     height: 40px;
     /* display: inline; */
     border-radius: 10px;
     background-color: #137792;
+    color: white;
+    font-size: 20px; 
+}
+
+#random {
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #F6990C, #D4680B, #EA4C00);
     color: white;
     font-size: 20px; 
 }
