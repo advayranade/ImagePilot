@@ -16,21 +16,17 @@ var app = new Vue({
             if (this.topic != "") {
                 $.ajax(`https://api.unsplash.com/topics/${this.topic}/photos?client_id=m8QGBvwTVC7MF_HqiCjIY-FXajno0lIUw_fSBHupWeA`)
                 .done(function(response) {
+                    img_grid.innerHTML = ""; 
                     for(let i=0; i<response.length; i++) {
                         console.log("here")
                         img_grid = document.getElementById("img_grid");
-                        img_grid.innerHTML = ""; 
                         img_card = document.createElement("li")
                         img = document.createElement("img");
                         img.id= response[i]["id"]
                         img_link = document.createElement("a");
                         img.src = response[i]["urls"]["small"]
                         description = document.createElement("p");
-                        if (!response[i]["description"]) {
-                            description.innerHTML = "No description available"
-                        } else {
-                            description.innerHTML = response[i]["alt_description"]
-                        }
+                        description.textContent = response[i]["alt_description"]
                         img_card.className = "img_card"
                         img_card.appendChild(img)
                         img_card.appendChild(description)
@@ -39,8 +35,7 @@ var app = new Vue({
                 })
 
             } else {
-                secret_key = ""
-            console.log(this.param)
+                console.log(this.param)
             fetch(`https://api.unsplash.com/search/photos?query=${this.param}&client_id=m8QGBvwTVC7MF_HqiCjIY-FXajno0lIUw_fSBHupWeA`)
                 .then((response) => response.json())
                 .then(function (data) {
@@ -94,8 +89,6 @@ var app = new Vue({
                     }
                     
                     
-
-                    
                     img_link.href = links[i]
                     img_link.appendChild(img);
                     img_card.appendChild(img_link);
@@ -103,8 +96,9 @@ var app = new Vue({
                     img_card.appendChild(likes);
                     img_card.className = "img_card"
                     img_card.appendChild(support)
-                    // img_card.appendChild(like_btn)
                     img_grid.appendChild(img_card);
+
+                    
                     
                 }
             })

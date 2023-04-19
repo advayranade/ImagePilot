@@ -9,13 +9,17 @@
 </head>
 <body>
     <div id="app">
-        <h1>Image Search</h1>
-            <input type="text" id="searchQuery" v-model="param" v-on:keypress="enterListener" name="searchQuery" placeholder="Search for high quality photos via Unsplash"/>
-            <select name="topics" id="topics" v-model="topic">
-                <option value="">Select</option>
-            </select>
-            <button type="submit" v-on:click="search" id="submit">Submit</button>
-            <button type="submit" v-on:click="randomFind" id="random">Randomize</button>
+        <h1> <img src="/logo.png" id="logo"> ImagePilot</h1>
+        <h4>Discover the world through pictures with just a tap - Your ultimate image search companion</h4>
+        <input type="checkbox" id="plus_images" name="plus_images" checked="checked">
+        <label for="vehicle1">Include <b id="unsplash_plus">Unsplash+</b> images</label><br>
+        <select name="topics" id="topics" v-model="topic">
+            <option value="" selected>Pick a topic</option>
+        </select>
+        <span><b>-or-</b></span>
+        <input type="text" id="searchQuery" v-model="param" v-on:keypress="enterListener" name="searchQuery" placeholder="Search for high quality photos via Unsplash"/>
+        <button type="submit" v-on:click="search" id="submit">Search</button>
+        <button type="submit" v-on:click="randomFind" id="random">Randomize</button>
         <div id="img_gridDiv">
             <ul id="img_grid"></ul>
         </div>
