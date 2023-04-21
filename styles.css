@@ -22,16 +22,17 @@ select {
 ul#img_grid {  
     list-style: none;
 }
+
 li {
     float: left;
 }
 
 .tag {
     background-color: grey;
-    
+
 }
 
-#unsplash_plus {
+b#unsplash_plus {
     background: linear-gradient(135deg,#fa00ff,#00e0ff 50%,#fa00ff);
     background-clip: text;
     -webkit-background-clip : text;
@@ -62,8 +63,9 @@ button#submit {
     width: 250px;
     height: 40px;
     border-radius: 10px;
-    background-image: linear-gradient(to right, #F6990C, #D4680B, #EA4C00);
-    color: white;
+    /* background-image: linear-gradient(to right, #F6990C, #D4680B, #EA4C00); */
+    background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    color: black;
     font-size: 20px; 
     font-family: system-ui;
 }
@@ -77,6 +79,10 @@ body {
 
 h1 {
     font-family: system-ui;
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 15%, rgba(252,176,69,1) 25%);
+    background-clip: text;
+    -webkit-background-clip : text;
+    -webkit-text-fill-color : transparent;
 }
 
 #logo {

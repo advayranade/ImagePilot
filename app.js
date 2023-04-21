@@ -143,6 +143,7 @@ var app = new Vue({
                         opt.textContent = response[i]["title"]
                         opt.value = response[i]["id"]
                         document.getElementById("topics").appendChild(opt);
+                        
                     }
                 })
         }

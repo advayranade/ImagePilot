@@ -5,14 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles.css"/>
-    <title>Document</title>
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon">
+    <title>ImagePilot</title>
 </head>
 <body>
     <div id="app">
-        <h1> <img src="/logo.png" id="logo"> ImagePilot</h1>
+        <!-- <img src="/logo_2.png" id="logo"> -->
+        <h1>ImagePilot</h1>
         <h4>Discover the world through pictures with just a tap - Your ultimate image search companion</h4>
         <input type="checkbox" id="plus_images" name="plus_images" checked="checked">
-        <label for="vehicle1">Include <b id="unsplash_plus">Unsplash+</b> images</label><br>
+        <label for="plus_images">Include <b id="unsplash_plus">Unsplash+</b> images</label><br>
         <select name="topics" id="topics" v-model="topic">
             <option value="" selected>Pick a topic</option>
         </select>
